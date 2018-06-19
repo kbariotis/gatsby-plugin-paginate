@@ -26,17 +26,8 @@ module.exports = {
             template: `${__dirname}/src/templates/page.js`,
             serialize: (results) => results.data.allMarkdownRemark.edges,
             query: `{
-              allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] }
-                limit: 1000
-                filter: { frontmatter: { draft: { ne: true } } }
-              ) {
+              allMarkdownRemark {
                 edges {
-                  next {
-                    frontmatter {
-                      path
-                    }
-                  }
                   node {
                     excerpt(pruneLength: 250)
                     html
@@ -47,7 +38,6 @@ module.exports = {
                       path
                       tags
                       title
-                      draft
                     }
                   }
                 }

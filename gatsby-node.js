@@ -32,7 +32,6 @@ exports.createPages = async ({ actions, graphql }, options) => {
  * Create pagination for posts
  */
 function createPagination(createPage, edges, pathPrefix, size, template) {
-  console.log(template)
   const pageTemplate = path.resolve(template);
 
   const pageSize = size || 5;

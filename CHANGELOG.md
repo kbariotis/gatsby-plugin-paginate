@@ -1,3 +1,17 @@
+<a name="1.8.0"></a>
+## 1.8.0 (2018-06-19)
+
+* remove console.log ([afe9518](https://github.com/kbariotis/gatsby-plugin-paginate/commit/afe9518))
+
+
+
+<a name="1.7.0"></a>
+## 1.7.0 (2018-06-19)
+
+* remove console.log ([afe9518](https://github.com/kbariotis/gatsby-plugin-paginate/commit/afe9518))
+
+
+
 <a name="1.6.0"></a>
 ## 1.6.0 (2018-06-19)
 

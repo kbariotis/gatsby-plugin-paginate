@@ -68,7 +68,7 @@ The template component will receive a `pageContext` (`pathContext` if you are in
 
 | Name  | Purpose |
 | ------------- | ------------- |
-| posts  | The collection of items for that page  |
+| posts  | The collection of items for that page as returned from your GraphQL query  |
 | page  | The current page number  |
 | pagesSum  | Total pages number  |
 | prevPath  | The path to the previous page  |

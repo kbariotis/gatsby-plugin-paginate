@@ -1,0 +1,22 @@
+{
+  "name": "gatsby-plugin-paginate",
+  "version": "1.0.0",
+  "description": "Plug and play pagination plugin for Gatsby",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbariotis/gatsby-plugin-paginate.git"
+  },
+  "keywords": [
+    "gatsby",
+    "pagination",
+    "paginate",
+    "plugin"
+  ],
+  "author": "Kostas Bariotis <konmpar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kbariotis/gatsby-plugin-paginate/issues"
+  },
+  "homepage": "https://github.com/kbariotis/gatsby-plugin-paginate#readme"
+}

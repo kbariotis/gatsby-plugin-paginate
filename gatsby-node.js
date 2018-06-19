@@ -1,40 +1,62 @@
 const path = require('path');
 
-exports.createPages = async ({ actions, graphql }, options) => {
+async function createPages({ actions, graphql }, options) {
   const { createPage } = actions;
 
-  const promises = options.sources.map(async (option) => {
-    const results = await graphql(option.query)
-    if (results.errors) {
-      return Promise.reject(results.errors);
-    }
-
-    Object.keys(results).map(prop => {
-      let feed = results[prop];
-      if (option.serialize && option.serialize instanceof Function) {
-        feed = option.serialize.call(null, results);
-      }
-      createPagination(
-        createPage,
-        feed,
-        option.path,
-        option.pageSize,
-        option.template
-      );
-    })
-  })
+  const promises = options.sources
+    .map((source) => validateSource(source))
+    .map((source) => preparePage(graphql, createPage, source));
 
   await Promise.all(promises)
 
 }
 
-/**
- * Create pagination for posts
- */
-function createPagination(createPage, edges, pathPrefix, size, template) {
-  const pageTemplate = path.resolve(template);
+function validateSource(source) {
+  if (!source.path) {
+    source.path = '/'
+  }
 
-  const pageSize = size || 5;
+  if (source.template) {
+    source.template = path.resolve(source.template);
+  } else {
+    throw new Error('`template` option is required');
+  }
+
+  if (source.pageSize) {
+    source.pageSize = parseInt(source.pageSize);
+  } else {
+    source.pageSize = 5;
+  }
+
+  if (!source.serialize || !source.serialize instanceof Function) {
+    throw new Error('`serialize` method must be a function and return an array');
+  }
+
+  return source;
+}
+
+async function preparePage(graphql, createPage, source) {
+  const results = await graphql(source.query)
+
+  if (results.errors) {
+    throw new Error(results.errors);
+  }
+
+  Object.keys(results).map(prop => {
+    const feed = source.serialize.call(null, results[prop]);
+
+    createPagination(
+      createPage,
+      feed,
+      source.path,
+      source.pageSize,
+      source.template
+    );
+  })
+}
+
+function createPagination(createPage, edges, pathPrefix, pageSize, pageTemplate) {
+
   const pagesSum = Math.ceil(edges.length / pageSize);
 
   for (let page = 1; page <= pagesSum; page++) {
@@ -55,3 +77,5 @@ function createPagination(createPage, edges, pathPrefix, size, template) {
 function paginate(array, page_size, page_number) {
   return array.slice(0).slice((page_number - 1) * page_size, page_number * page_size);
 }
+
+module.exports = { createPages };

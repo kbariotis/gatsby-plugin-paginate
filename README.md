@@ -54,6 +54,8 @@ module.exports = {
     ...
   ]
 }
+```
+
 
 Configuration Options:
 
@@ -63,5 +65,3 @@ Configuration Options:
 | query  | The GraphQL query to fetch the data to paginate  |
 | serialize  | If the GraphQL query doesn't return a list, convert it here  |
 | pageSize  | The number of items per page  |
-
-```

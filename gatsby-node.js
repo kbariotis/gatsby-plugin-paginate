@@ -32,7 +32,6 @@ function createPagination(createPage, edges, pathPrefix, size) {
   const pagesSum = Math.ceil(edges.length / pageSize);
 
   for (let page = 1; page <= pagesSum; page++) {
-    console.log(`${pathPrefix}/${page}`)
     createPage({
       path: `${pathPrefix}/${page}`,
       component: pageTemplate,

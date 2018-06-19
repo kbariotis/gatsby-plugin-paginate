@@ -17,6 +17,7 @@ module.exports = {
         sources: [
           {
             path: `/page`,
+            pageSize: 5,
             serialize: (results) => results.data.allMarkdownRemark.edges,
             query: `{
               allMarkdownRemark(
@@ -53,4 +54,14 @@ module.exports = {
     ...
   ]
 }
+
+Configuration Options:
+
+| Name  | Purpose |
+| ------------- | ------------- |
+| path  | The prefix for each page. E.g.: `/path` will become `/path/1`, `/path/2`, etc..  |
+| query  | The GraphQL query to fetch the data to paginate  |
+| serialize  | If the GraphQL query doesn't return a list, convert it here  |
+| pageSize  | The number of items per page  |
+
 ```

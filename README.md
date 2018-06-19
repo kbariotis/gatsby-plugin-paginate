@@ -85,5 +85,5 @@ The template component will receive a `pageContext` (`pathContext` if you are in
 | nextPath  | The path to the next page |
 
 
-### Contribute
+## Contribute
 Please open an issue with your specific use case or bug or help me resolve other's issues. :)

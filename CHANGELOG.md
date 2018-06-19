@@ -1,3 +1,21 @@
+<a name="1.10.0"></a>
+## 1.10.0 (2018-06-19)
+
+* refactor code, update README ([d072bbd](https://github.com/kbariotis/gatsby-plugin-paginate/commit/d072bbd))
+* simplify example ([a42acc5](https://github.com/kbariotis/gatsby-plugin-paginate/commit/a42acc5))
+* simplify example ([1fd6b6d](https://github.com/kbariotis/gatsby-plugin-paginate/commit/1fd6b6d))
+
+
+
+<a name="1.9.0"></a>
+## 1.9.0 (2018-06-19)
+
+* refactor code, update README ([d072bbd](https://github.com/kbariotis/gatsby-plugin-paginate/commit/d072bbd))
+* simplify example ([a42acc5](https://github.com/kbariotis/gatsby-plugin-paginate/commit/a42acc5))
+* simplify example ([1fd6b6d](https://github.com/kbariotis/gatsby-plugin-paginate/commit/1fd6b6d))
+
+
+
 <a name="1.8.0"></a>
 ## 1.8.0 (2018-06-19)
 

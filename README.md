@@ -24,7 +24,7 @@ module.exports = {
             path: `/page`,
             pageSize: 5,
             template: `${__dirname}/src/templates/page.js`,
-            serialize: (results) => results.edges,
+            serialize: (results) => results.allMarkdownRemark.edges,
             query: `{
               allMarkdownRemark {
                 edges {

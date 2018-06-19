@@ -55,7 +55,7 @@ module.exports = {
 Configuration Options:
 
 | Name  | Required | Purpose |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | path  | false | The prefix for each page. E.g.: `/path` will become `/path/1`, `/path/2`, etc..  |
 | template  | true | Path to the template to be used for each page  |
 | query  | true | The GraphQL query to fetch the data to paginate  |

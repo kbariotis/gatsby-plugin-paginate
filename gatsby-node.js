@@ -14,7 +14,13 @@ exports.createPages = async ({ actions, graphql }, options) => {
       if (option.serialize && option.serialize instanceof Function) {
         feed = option.serialize.call(null, results);
       }
-      createPagination(createPage, feed, option.path, options.pageSize);
+      createPagination(
+        createPage,
+        feed,
+        option.path,
+        option.pageSize,
+        option.template
+      );
     })
   })
 
@@ -25,8 +31,9 @@ exports.createPages = async ({ actions, graphql }, options) => {
 /**
  * Create pagination for posts
  */
-function createPagination(createPage, edges, pathPrefix, size) {
-  const pageTemplate = path.resolve(`src/templates/page.js`);
+function createPagination(createPage, edges, pathPrefix, size, template) {
+  console.log(template)
+  const pageTemplate = path.resolve(template);
 
   const pageSize = size || 5;
   const pagesSum = Math.ceil(edges.length / pageSize);

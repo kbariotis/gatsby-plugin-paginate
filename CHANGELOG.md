@@ -1,3 +1,14 @@
+<a name="1.11.0"></a>
+## 1.11.0 (2018-06-20)
+
+* add npmignore ([34f67fb](https://github.com/kbariotis/gatsby-plugin-paginate/commit/34f67fb))
+* update gitignore ([ea4b5d2](https://github.com/kbariotis/gatsby-plugin-paginate/commit/ea4b5d2))
+* update keywords ([d52c74f](https://github.com/kbariotis/gatsby-plugin-paginate/commit/d52c74f))
+* update README ([663c159](https://github.com/kbariotis/gatsby-plugin-paginate/commit/663c159))
+* update remade ([8d47c45](https://github.com/kbariotis/gatsby-plugin-paginate/commit/8d47c45))
+
+
+
 <a name="1.10.0"></a>
 ## 1.10.0 (2018-06-19)
 

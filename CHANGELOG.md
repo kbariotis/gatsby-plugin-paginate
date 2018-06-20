@@ -1,3 +1,10 @@
+<a name="1.12.0"></a>
+## 1.12.0 (2018-06-20)
+
+* update keywords ([44ea791](https://github.com/kbariotis/gatsby-plugin-paginate/commit/44ea791))
+
+
+
 <a name="1.11.0"></a>
 ## 1.11.0 (2018-06-20)
 

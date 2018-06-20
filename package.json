@@ -17,10 +17,7 @@
   },
   "keywords": [
     "gatsby",
-    "gatsby-plugin",
-    "paginate",
-    "pagination",
-    "plugin"
+    "gatsby-plugin"
   ],
   "license": "MIT"
 }
